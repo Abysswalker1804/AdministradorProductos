@@ -4,12 +4,12 @@
   "description": "REST API's con Express y Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts"
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
