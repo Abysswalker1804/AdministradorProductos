@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
 
     "outDir": "./dist",
     "rootDir": "./src",
@@ -121,6 +122,20 @@
     "compilerOptions": {
     "module": "commonjs"
     }
+=======
+    "target": "esnext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["ESNext"],
+    "strict": false,
+    "sourceMap": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+>>>>>>> e6d42d1 (Actualización 03/06/2025)
   },
   "include": ["src/**/*.ts"]
 }
