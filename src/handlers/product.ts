@@ -22,13 +22,11 @@ export const getProductBYID = async (req : Request, res: Response ) =>{
     const product = await Product.findByPk(id)
     if(!product){
         return res.status(404).json({
-            errror:'Producto No Encontrado'
+            error:'Producto No Encontrado'
         })
     }
     res.json({data:product})
-   }catch(error){
-    console.log(error)
-   }
+   }catch(error){console.log(error)}
 }
 
 export const createProduct = async (req : Request, res : Response) => {
@@ -45,7 +43,7 @@ export const updateProduct = async (req: Request, res: Response)=>{
     const product = await Product.findByPk(id)
     if(!product){
         return res.status(404).json({
-            errror:'Producto No Encontrado'
+            error:'Producto No Encontrado'
         })
     }
 
@@ -60,7 +58,7 @@ export const updateAvailability = async (req: Request, res: Response)=>{
     const product = await Product.findByPk(id)
     if(!product){
         return res.status(404).json({
-            errror:'Producto No Encontrado'
+            error:'Producto No Encontrado'
         })
     }
      product.availability = !product.dataValues.availability
@@ -73,7 +71,7 @@ export const deleteProduct = async (req: Request, res: Response)=>{
     const product = await Product.findByPk(id)
     if(!product){
         return res.status(404).json({
-            errror:'Producto No Encontrado'
+            error:'Producto No Encontrado'
         })
     }
     await product.destroy()
